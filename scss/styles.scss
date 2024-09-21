@@ -1,0 +1,57 @@
+// Import colors
+@import 'colors';
+
+// Global Styles
+* {
+    color: $white;  // Variable used here
+    font-size: 1.2rem;
+}
+
+// Mixin for button styling (reusable)
+@mixin button-style {
+    background-color: $neon-yellow;
+    color: $olive-green;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 7em;
+    height: 2.5em;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5em 2em;
+}
+
+.container {
+    background-color: $yellow;  // Using variable from colors.scss
+    border: 1px solid #000;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+
+    .left {
+        background-color: $olive-green;  // Using another variable
+        height: 100%;
+        width: 69%;
+        position: relative;
+    }
+
+    .right {
+        background-color: $light-green;  // Using another variable
+        height: 100%;
+        position: relative;
+        width: 29%;
+
+        .button {
+            @include button-style;  // Using mixin
+
+            // Center the button vertically and horizontally
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+        }
+    }
+}

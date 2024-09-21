@@ -1,0 +1,16 @@
+{
+  "name": "m3-w3-d2-homework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch scss:css"
+  
+  },
+  "keywords": [],
+  "author": "Sangil Jung",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.79.3"
+  }
+}
